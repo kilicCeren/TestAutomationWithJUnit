@@ -1,4 +1,4 @@
-package Kendi_Pratiklerim.day04__mavenProjeKullanimi;
+package day04__mavenProjeKullanimi;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
