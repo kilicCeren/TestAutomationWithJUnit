@@ -16,10 +16,10 @@ import java.util.Set;
 
 public class ReusableMethods {
 
-    public static void bekle(int saniye ){
+    public static void bekle(int saniye) {
 
         try {
-            Thread.sleep(saniye*1000);
+            Thread.sleep(saniye * 1000);
         } catch (InterruptedException e) {
             System.out.println("Thread.sleep calismadi");
         }
@@ -27,10 +27,10 @@ public class ReusableMethods {
 
     }
 
-    public static List<String> stringListeyeDonustur(List<WebElement> webElementList){
+    public static List<String> stringListeyeDonustur(List<WebElement> webElementList) {
         List<String> tumListeStr = new ArrayList<>();
 
-        for (WebElement eachBaslik:webElementList){
+        for (WebElement eachBaslik : webElementList) {
 
             tumListeStr.add(eachBaslik.getText());
         }
@@ -38,38 +38,38 @@ public class ReusableMethods {
         return tumListeStr;
     }
 
-    public static void urlIleWindowDegistir(WebDriver driver, String hedefUrl){
+    public static void urlIleWindowDegistir(WebDriver driver, String hedefUrl) {
         Set<String> tumWindowWhdSeti = driver.getWindowHandles();
-        for(String eachWhd :tumWindowWhdSeti){
+        for (String eachWhd : tumWindowWhdSeti) {
 
             driver.switchTo().window(eachWhd);
 
-            if (driver.getCurrentUrl().equals(hedefUrl)){
+            if (driver.getCurrentUrl().equals(hedefUrl)) {
                 break;
             }
 
         }
     }
 
-    public static void titleIleWindowDegistir(WebDriver driver, String hedefTitle){
+    public static void titleIleWindowDegistir(WebDriver driver, String hedefTitle) {
         Set<String> tumWindowWhdSeti = driver.getWindowHandles();
-        for(String eachWhd :tumWindowWhdSeti){
+        for (String eachWhd : tumWindowWhdSeti) {
 
             driver.switchTo().window(eachWhd);
 
-            if (driver.getTitle().equals(hedefTitle)){
+            if (driver.getTitle().equals(hedefTitle)) {
                 break;
             }
 
         }
     }
 
-    public static void tumSayfaScreenshotIsimli(WebDriver driver,String raporIsmi){
+    public static void tumSayfaScreenshotIsimli(WebDriver driver, String raporIsmi) {
         // 1.adim tss objesi olusturalim
         TakesScreenshot tss = (TakesScreenshot) driver;
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/"+ raporIsmi +".jpeg");
+        File asilResim = new File("target/screenshots/" + raporIsmi + ".jpeg");
 
 
         // 3.adim screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -77,14 +77,14 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Ekran resmi kaydedilemedi");
         }
 
     }
 
-    public static void tumSayfaScreenshotTarihli(WebDriver driver){
+    public static void tumSayfaScreenshotTarihli(WebDriver driver) {
 
         // once tarih etiketi olusturalim
         LocalDateTime ldt = LocalDateTime.now();
@@ -95,7 +95,7 @@ public class ReusableMethods {
         TakesScreenshot tss = (TakesScreenshot) driver;
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/TumSayfaSS_"+ tarihEtiketi +".jpeg");
+        File asilResim = new File("target/screenshots/TumSayfaSS_" + tarihEtiketi + ".jpeg");
 
 
         // 3.adim screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -103,14 +103,14 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Ekran resmi kaydedilemedi");
         }
 
     }
 
-    public static void tumSayfaScreenshotIsimVeTarihli(WebDriver driver,String isim){
+    public static void tumSayfaScreenshotIsimVeTarihli(WebDriver driver, String isim) {
 
         // once tarih etiketi olusturalim
         LocalDateTime ldt = LocalDateTime.now();
@@ -121,7 +121,7 @@ public class ReusableMethods {
         TakesScreenshot tss = (TakesScreenshot) driver;
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/" + isim +"_"+ tarihEtiketi +".jpeg");
+        File asilResim = new File("target/screenshots/" + isim + "_" + tarihEtiketi + ".jpeg");
 
 
         // 3.adim screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -129,19 +129,19 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Ekran resmi kaydedilemedi");
         }
 
     }
 
-    public static void webElementScreenshotIsimli(WebElement targetElement, String raporismi){
+    public static void webElementScreenshotIsimli(WebElement targetElement, String raporismi) {
         // 1.adim screenshot alacagimiz webelementi locate edip kaydedelim
         //        biz yukarda Logout butonunu locate ettik
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/"+ raporismi +".jpeg");
+        File asilResim = new File("target/screenshots/" + raporismi + ".jpeg");
 
 
         // 3.adim webElement'i kullanarak screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -149,13 +149,13 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Fotograf cekilemedi");
         }
     }
 
-    public static void webElementScreenshotTarihli(WebElement targetElement){
+    public static void webElementScreenshotTarihli(WebElement targetElement) {
 
         // once tarih etiketi olusturalim
         LocalDateTime ldt = LocalDateTime.now();
@@ -167,7 +167,7 @@ public class ReusableMethods {
         //        biz yukarda Logout butonunu locate ettik
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/Webelement"+ tarihEtiketi +".jpeg");
+        File asilResim = new File("target/screenshots/Webelement" + tarihEtiketi + ".jpeg");
 
 
         // 3.adim webElement'i kullanarak screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -175,13 +175,13 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Fotograf cekilemedi");
         }
     }
 
-    public static void webElementScreenshotTarihVeIsimli(WebElement targetElement,String raporIsmi){
+    public static void webElementScreenshotTarihVeIsimli(WebElement targetElement, String raporIsmi) {
 
         // once tarih etiketi olusturalim
         LocalDateTime ldt = LocalDateTime.now();
@@ -193,7 +193,7 @@ public class ReusableMethods {
         //        biz yukarda Logout butonunu locate ettik
 
         // 2.adim resmi kaydedecegimiz File'i olusturalim
-        File asilResim = new File("target/screenshots/"+raporIsmi +"_"+ tarihEtiketi +".jpeg");
+        File asilResim = new File("target/screenshots/" + raporIsmi + "_" + tarihEtiketi + ".jpeg");
 
 
         // 3.adim webElement'i kullanarak screenshot'i alip gecici bir dosya olarak kaydedelim
@@ -201,7 +201,7 @@ public class ReusableMethods {
 
         // 4.adim gecici dosyayi asil dosyaya kopyalayalim
         try {
-            FileUtils.copyFile(geciciDosya,asilResim);
+            FileUtils.copyFile(geciciDosya, asilResim);
         } catch (IOException e) {
             System.out.println("Fotograf cekilemedi");
         }
