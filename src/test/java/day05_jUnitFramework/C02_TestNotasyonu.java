@@ -1,4 +1,4 @@
-package Kendi_Pratiklerim.day05_jUnitFramework;
+package day05_jUnitFramework;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
