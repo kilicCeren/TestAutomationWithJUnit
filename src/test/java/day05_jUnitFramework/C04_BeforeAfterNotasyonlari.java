@@ -1,4 +1,4 @@
-package Kendi_Pratiklerim.day05_jUnitFramework;
+package day05_jUnitFramework;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
