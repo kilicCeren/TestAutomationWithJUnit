@@ -1,4 +1,4 @@
-package Kendi_Pratiklerim.day04__mavenProjeKullanimi;
+package day04__mavenProjeKullanimi;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
