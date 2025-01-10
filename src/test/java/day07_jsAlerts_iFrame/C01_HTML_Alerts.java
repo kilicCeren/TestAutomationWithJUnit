@@ -16,11 +16,9 @@ public class C01_HTML_Alerts extends TestBaseEach {
         ReusableMethods.bekle(1);
 
         // cookies kabul edin
-
         driver.findElement(By.xpath("//div[text()='Accept all']"))
                 .click();
         //Cookies Allert cikmamasi halinde Test FAILED
-
         ReusableMethods.bekle(5);
 
     }
