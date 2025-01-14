@@ -13,7 +13,7 @@ public class C08_Actions_MoveToElement extends TestBaseEach{
     public void test01(){
         //1- https://www.testotomasyonu.com/ adresine gidin
         driver.get("https://www.testotomasyonu.com/");
-        //2- “Kids Wear” menusunun acilmasi icin mouse’u bu menunun ustune getirin
+        //2- “Kids  Wear” menusunun acilmasi icin mouse’u bu menunun ustune getirin
 
         Actions actions = new Actions(driver);
         WebElement kidsWearButton = driver.findElement(By.xpath("(//li[@class='has-sub'])[7]"));
