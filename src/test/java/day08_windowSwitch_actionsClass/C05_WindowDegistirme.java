@@ -12,7 +12,7 @@ public class C05_WindowDegistirme extends TestBaseEach{
     @Test
     public void test01(){
 
-        //● https://the-internet.herokuapp.com/windows adresine gidin.
+        //● https://the-internet.herokuapp.com/windows  adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
 
         // sayfadaki elemental selenium linkini tiklayin
