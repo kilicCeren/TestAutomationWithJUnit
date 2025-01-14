@@ -13,7 +13,7 @@ public class C09_KeybordActions extends TestBaseEach{
     @Test
     public void test01(){
 
-        //1- https://www.testotomasyonu.com sayfasina gidelim
+        //1- https://www.testotomasyonu.com  sayfasina gidelim
         driver.get("https://www.testotomasyonu.com");
 
         //2- Arama kutusuna actions method’larini kullanarak “DELL Core I3” yazdirin
