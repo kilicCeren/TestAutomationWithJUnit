@@ -14,7 +14,7 @@ public class C07_Actions_DragAndDrop extends TestBaseEach {
         //1- https://testotomasyonu.com/droppable adresine gidelim
         driver.get("https://testotomasyonu.com/droppable");
 
-        //2- Accept bolumunde “Acceptable” butonunu tutup “Drop Here” kutusunun ustune birakalim
+        //2- Accept bolumunde “Acceptable”  butonunu tutup “Drop Here” kutusunun ustune birakalim
         Actions actions = new Actions(driver);
         ReusableMethods.bekle(1);
         WebElement acceptableButtonElement = driver.findElement(By.xpath("//*[.='Acceptable']"));
