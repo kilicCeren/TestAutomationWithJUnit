@@ -11,6 +11,7 @@ public class C06_FileExistTesti {
     public void test01(){
 
         // day09 package'i altinda deneme.txt dosyasinin
+
         // var oldugunu test edin
 
         /*
